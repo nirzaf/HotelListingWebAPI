@@ -65,7 +65,6 @@ namespace HotelListing.Controllers
             var hotel = _mapper.Map<Hotel>(hotelDTO);
             await _unitOfWork.Hotels.Insert(hotel);
             await _unitOfWork.Save();
-
             return CreatedAtRoute("GetHotel", new { id = hotel.Id }, hotel);
         }
 
@@ -81,7 +80,6 @@ namespace HotelListing.Controllers
                 _logger.LogError($"Invalid UPDATE attempt in {nameof(UpdateHotel)}");
                 return BadRequest(ModelState);
             }
-
             
             var hotel = await _unitOfWork.Hotels.Get(q => q.Id == id);
             if(hotel == null)
@@ -93,7 +91,6 @@ namespace HotelListing.Controllers
             _mapper.Map(hotelDTO, hotel);
             _unitOfWork.Hotels.Update(hotel);
             await _unitOfWork.Save();
-
             return NoContent();
            
         }
@@ -120,9 +117,7 @@ namespace HotelListing.Controllers
 
             await _unitOfWork.Hotels.Delete(id);
             await _unitOfWork.Save();
-
-            return NoContent();
-           
+            return NoContent();           
         }
     }
 }

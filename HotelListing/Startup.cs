@@ -29,18 +29,14 @@ namespace HotelListing
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddDbContext<DatabaseContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DevConnection"))
             );
 
             services.AddMemoryCache();
-
             services.ConfigureRateLimiting();
             services.AddHttpContextAccessor();
-
             services.ConfigureHttpCacheHeaders();
-
             services.AddAuthentication();
             services.ConfigureIdentity();
             services.ConfigureJWT(Configuration);
@@ -90,20 +86,14 @@ namespace HotelListing
             });
 
             app.ConfigureExceptionHandler();
-
             app.UseHttpsRedirection();
-
             app.UseCors("AllowAll");
-
             app.UseResponseCaching();
             app.UseHttpCacheHeaders();
             app.UseIpRateLimiting();
-
             app.UseRouting();
-
             app.UseAuthentication();
             app.UseAuthorization();
-
             
             app.UseEndpoints(endpoints =>
             {
