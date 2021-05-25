@@ -62,9 +62,13 @@ namespace HotelListing.Controllers
                 return BadRequest(ModelState);
             }
 
+            // Mapping the Model with Data Transfer Object DTO
             var hotel = _mapper.Map<Hotel>(hotelDTO);
+            // Inserting Hotel Object into Unit of work object 
             await _unitOfWork.Hotels.Insert(hotel);
+            // Save the data into the database
             await _unitOfWork.Save();
+            // Riderect to GetHotel controller with Hotel Id and hotel Object 
             return CreatedAtRoute("GetHotel", new { id = hotel.Id }, hotel);
         }
 
