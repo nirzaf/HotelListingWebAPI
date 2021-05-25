@@ -6,7 +6,6 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +17,7 @@ namespace HotelListing.Services
         private readonly UserManager<ApiUser> _userManager;
         private readonly IConfiguration _configuration;
         private ApiUser _user;
-        public AuthManager(UserManager<ApiUser> userManager, 
+        public AuthManager(UserManager<ApiUser> userManager,
             IConfiguration configuration)
         {
             _userManager = userManager;

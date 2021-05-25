@@ -1,9 +1,6 @@
 ﻿using HotelListing.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace HotelListing.Controllers
@@ -25,7 +22,7 @@ namespace HotelListing.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetCountries()
         {
-            return Ok(_context.Countries);  
+            return Ok(_context.Countries);
         }
     }
 }

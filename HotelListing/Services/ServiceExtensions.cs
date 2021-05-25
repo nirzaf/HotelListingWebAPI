@@ -15,9 +15,7 @@ using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace HotelListing
 {
@@ -57,8 +55,10 @@ namespace HotelListing
 
         public static void ConfigureExceptionHandler(this IApplicationBuilder app)
         {
-            app.UseExceptionHandler(error => {
-                error.Run(async context => {
+            app.UseExceptionHandler(error =>
+            {
+                error.Run(async context =>
+                {
                     context.Response.StatusCode = StatusCodes.Status500InternalServerError;
                     context.Response.ContentType = "application/json";
                     var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
@@ -87,7 +87,8 @@ namespace HotelListing
             });
         }
 
-        public static void ConfigureHttpCacheHeaders(this IServiceCollection services) {
+        public static void ConfigureHttpCacheHeaders(this IServiceCollection services)
+        {
             services.AddResponseCaching();
             services.AddHttpCacheHeaders(
                 (expirationOpt) =>

@@ -1,8 +1,6 @@
 ﻿using HotelListing.Data;
 using HotelListing.IRepository;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace HotelListing.Repository

@@ -6,9 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace HotelListing.Controllers
@@ -36,7 +34,7 @@ namespace HotelListing.Controllers
         {
             var hotels = await _unitOfWork.Hotels.GetPagedList(requestParams);
             var results = _mapper.Map<IList<HotelDTO>>(hotels);
-            return Ok(results);  
+            return Ok(results);
         }
 
         [HttpGet("{id:int}", Name = "GetHotel")]
@@ -49,6 +47,7 @@ namespace HotelListing.Controllers
             return Ok(result);
         }
 
+        //Role based Authorization 
         [Authorize(Roles = "Administrator")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -62,27 +61,31 @@ namespace HotelListing.Controllers
                 return BadRequest(ModelState);
             }
 
+            // Mapping the Model with Data Transfer Object DTO
             var hotel = _mapper.Map<Hotel>(hotelDTO);
+            // Inserting Hotel Object into Unit of work object 
             await _unitOfWork.Hotels.Insert(hotel);
+            // Save the data into the database
             await _unitOfWork.Save();
+            // Riderect to GetHotel controller with Hotel Id and hotel Object 
             return CreatedAtRoute("GetHotel", new { id = hotel.Id }, hotel);
         }
 
         [Authorize]
         [HttpPut("{id:int}")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> UpdateHotel(int id, [FromBody] UpdateHotelDTO hotelDTO)
         {
-            if(!ModelState.IsValid || id < 1)
+            if (!ModelState.IsValid || id < 1)
             {
                 _logger.LogError($"Invalid UPDATE attempt in {nameof(UpdateHotel)}");
                 return BadRequest(ModelState);
             }
-            
+
             var hotel = await _unitOfWork.Hotels.Get(q => q.Id == id);
-            if(hotel == null)
+            if (hotel == null)
             {
                 _logger.LogError($"Invalid UPDATE attempt in {nameof(UpdateHotel)}");
                 return BadRequest("Submitted data is invalid");
@@ -91,8 +94,8 @@ namespace HotelListing.Controllers
             _mapper.Map(hotelDTO, hotel);
             _unitOfWork.Hotels.Update(hotel);
             await _unitOfWork.Save();
-            return NoContent();
-           
+            return Ok();
+
         }
 
         [Authorize]
@@ -117,7 +120,7 @@ namespace HotelListing.Controllers
 
             await _unitOfWork.Hotels.Delete(id);
             await _unitOfWork.Save();
-            return NoContent();           
+            return NoContent();
         }
     }
 }

@@ -13,7 +13,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Serilog;
 
 namespace HotelListing
 {
@@ -41,7 +40,8 @@ namespace HotelListing
             services.ConfigureIdentity();
             services.ConfigureJWT(Configuration);
 
-            services.AddCors(o => {
+            services.AddCors(o =>
+            {
                 o.AddPolicy("AllowAll", builder =>
                     builder.AllowAnyOrigin()
                     .AllowAnyMethod()
@@ -58,14 +58,15 @@ namespace HotelListing
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HotelListing", Version = "v1" });
             });
 
-            services.AddControllers(config => {
+            services.AddControllers(config =>
+            {
                 config.CacheProfiles.Add("120SecondsDuration", new CacheProfile
                 {
                     Duration = 120
 
                 });
-            }).AddNewtonsoftJson(op => 
-            op.SerializerSettings.ReferenceLoopHandling = 
+            }).AddNewtonsoftJson(op =>
+            op.SerializerSettings.ReferenceLoopHandling =
                 Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
             services.ConfigureVersioning();
@@ -80,7 +81,8 @@ namespace HotelListing
             }
 
             app.UseSwagger();
-            app.UseSwaggerUI(c => {
+            app.UseSwaggerUI(c =>
+            {
                 string swaggerJsonBasePath = string.IsNullOrWhiteSpace(c.RoutePrefix) ? "." : "..";
                 c.SwaggerEndpoint($"{swaggerJsonBasePath}/swagger/v1/swagger.json", "Hotel Listing API");
             });
@@ -94,10 +96,10 @@ namespace HotelListing
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-            
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();    
+                endpoints.MapControllers();
             });
         }
     }
