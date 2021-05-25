@@ -1152,3 +1152,132 @@ System.ArgumentNullException: String reference not set to an instance of a Strin
    at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
    at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
 2021-05-25 21:28:30.265 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Country - - - 500 - application/json 32020.4319ms
+2021-05-25 21:52:16.682 +05:30 [INF] Application Is Starting
+2021-05-25 21:53:05.929 +05:30 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-05-25 21:53:20.256 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-25 21:53:20.256 +05:30 [INF] Hosting environment: Development
+2021-05-25 21:53:20.256 +05:30 [INF] Content root path: E:\Source\Repos\HotelListing-API-dotnet5-master\HotelListing
+2021-05-25 21:53:20.307 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger - -
+2021-05-25 21:53:20.462 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2021-05-25 21:53:20.564 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger - - - 301 - - 258.9863ms
+2021-05-25 21:53:20.646 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 214.7730ms
+2021-05-25 21:53:20.697 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/swagger-ui.css - -
+2021-05-25 21:53:20.730 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/swagger-ui-bundle.js - -
+2021-05-25 21:53:20.730 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/swagger-ui-standalone-preset.js - -
+2021-05-25 21:53:20.865 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-05-25 21:53:20.865 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-05-25 21:53:20.866 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/swagger-ui.css - - - 200 142933 text/css 169.2204ms
+2021-05-25 21:53:20.869 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 139.2347ms
+2021-05-25 21:53:20.888 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-05-25 21:53:20.901 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 170.6061ms
+2021-05-25 21:53:21.767 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2021-05-25 21:53:21.884 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 116.5723ms
+2021-05-25 21:53:21.887 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/favicon-32x32.png - -
+2021-05-25 21:53:21.899 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-05-25 21:53:21.900 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/favicon-32x32.png - - - 200 628 image/png 12.8402ms
+2021-05-25 22:08:53.942 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2021-05-25 22:08:53.946 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 3.6718ms
+2021-05-25 22:08:54.017 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/swagger-ui.css - -
+2021-05-25 22:08:54.297 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-05-25 22:08:54.301 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/swagger-ui.css - - - 200 142933 text/css 283.6895ms
+2021-05-25 22:08:54.951 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2021-05-25 22:08:54.957 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 6.3705ms
+2021-05-25 22:08:55.001 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/favicon-32x32.png - -
+2021-05-25 22:08:55.002 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-05-25 22:08:55.002 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/favicon-32x32.png - - - 200 628 image/png 0.6471ms
+2021-05-25 22:09:05.501 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/api/country - -
+2021-05-25 22:09:05.511 +05:30 [INF] No cached response available for this request.
+2021-05-25 22:09:05.528 +05:30 [INF] Checking for conditional GET/HEAD.
+2021-05-25 22:09:05.532 +05:30 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-05-25 22:09:05.532 +05:30 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-05-25 22:09:05.533 +05:30 [INF] Checking for conditional PUT/PATCH.
+2021-05-25 22:09:05.533 +05:30 [INF] Not valid - method isn't PUT or PATCH.
+2021-05-25 22:09:05.533 +05:30 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-05-25 22:09:06.040 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at HotelListing.ServiceExtensions.<>c__DisplayClass1_0.<ConfigureJWT>b__1(JwtBearerOptions o) in E:\Source\Repos\HotelListing-API-dotnet5-master\HotelListing\Services\ServiceExtensions.cs:line 44
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-25 22:09:06.105 +05:30 [ERR] Something Went Wrong in the System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at HotelListing.ServiceExtensions.<>c__DisplayClass1_0.<ConfigureJWT>b__1(JwtBearerOptions o) in E:\Source\Repos\HotelListing-API-dotnet5-master\HotelListing\Services\ServiceExtensions.cs:line 44
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-25 22:09:06.243 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/api/country - - - 500 - application/json 742.1294ms
+2021-05-25 22:20:18.847 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/country application/json 143
+2021-05-25 22:20:18.852 +05:30 [INF] No cached response available for this request.
+2021-05-25 22:20:18.853 +05:30 [INF] Checking for conditional GET/HEAD.
+2021-05-25 22:20:18.853 +05:30 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-05-25 22:20:18.853 +05:30 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-05-25 22:20:18.853 +05:30 [INF] Checking for conditional PUT/PATCH.
+2021-05-25 22:20:18.853 +05:30 [INF] Not valid - method isn't PUT or PATCH.
+2021-05-25 22:20:18.853 +05:30 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-05-25 22:20:19.020 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at HotelListing.ServiceExtensions.<>c__DisplayClass1_0.<ConfigureJWT>b__1(JwtBearerOptions o) in E:\Source\Repos\HotelListing-API-dotnet5-master\HotelListing\Services\ServiceExtensions.cs:line 44
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-25 22:20:19.021 +05:30 [ERR] Something Went Wrong in the System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at HotelListing.ServiceExtensions.<>c__DisplayClass1_0.<ConfigureJWT>b__1(JwtBearerOptions o) in E:\Source\Repos\HotelListing-API-dotnet5-master\HotelListing\Services\ServiceExtensions.cs:line 44
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-25 22:20:19.021 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/country application/json 143 - 500 - application/json 174.6491ms
