@@ -43,7 +43,7 @@ namespace HotelListing.Repository
                     query = query.Include(includePropery);
                 }
             }
-            
+
             return await query.AsNoTracking().FirstOrDefaultAsync(expression);
         }
 
@@ -76,7 +76,7 @@ namespace HotelListing.Repository
         {
             IQueryable<T> query = _db;
 
-           
+
             if (includes != null)
             {
                 foreach (var includePropery in includes)

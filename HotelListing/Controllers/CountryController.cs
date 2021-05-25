@@ -2,14 +2,11 @@
 using HotelListing.Data;
 using HotelListing.IRepository;
 using HotelListing.Models;
-using Marvin.Cache.Headers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace HotelListing.Controllers
@@ -22,7 +19,7 @@ namespace HotelListing.Controllers
         private readonly ILogger<CountryController> _logger;
         private readonly IMapper _mapper;
 
-        public CountryController(IUnitOfWork unitOfWork, ILogger<CountryController> logger, 
+        public CountryController(IUnitOfWork unitOfWork, ILogger<CountryController> logger,
             IMapper mapper)
         {
             _unitOfWork = unitOfWork;
@@ -72,7 +69,7 @@ namespace HotelListing.Controllers
             await _unitOfWork.Save();
 
             return CreatedAtRoute("GetCountry", new { id = country.Id }, country);
-           
+
         }
 
         [Authorize]
@@ -100,7 +97,7 @@ namespace HotelListing.Controllers
             await _unitOfWork.Save();
 
             return NoContent();
-           
+
         }
 
         [Authorize]
@@ -127,7 +124,7 @@ namespace HotelListing.Controllers
             await _unitOfWork.Save();
 
             return NoContent();
-           
+
         }
     }
 }

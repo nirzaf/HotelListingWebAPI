@@ -34,7 +34,7 @@ namespace HotelListing.Controllers
         {
             var hotels = await _unitOfWork.Hotels.GetPagedList(requestParams);
             var results = _mapper.Map<IList<HotelDTO>>(hotels);
-            return Ok(results);  
+            return Ok(results);
         }
 
         [HttpGet("{id:int}", Name = "GetHotel")]
@@ -78,14 +78,14 @@ namespace HotelListing.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> UpdateHotel(int id, [FromBody] UpdateHotelDTO hotelDTO)
         {
-            if(!ModelState.IsValid || id < 1)
+            if (!ModelState.IsValid || id < 1)
             {
                 _logger.LogError($"Invalid UPDATE attempt in {nameof(UpdateHotel)}");
                 return BadRequest(ModelState);
             }
-            
+
             var hotel = await _unitOfWork.Hotels.Get(q => q.Id == id);
-            if(hotel == null)
+            if (hotel == null)
             {
                 _logger.LogError($"Invalid UPDATE attempt in {nameof(UpdateHotel)}");
                 return BadRequest("Submitted data is invalid");
@@ -95,7 +95,7 @@ namespace HotelListing.Controllers
             _unitOfWork.Hotels.Update(hotel);
             await _unitOfWork.Save();
             return Ok();
-           
+
         }
 
         [Authorize]
@@ -120,7 +120,7 @@ namespace HotelListing.Controllers
 
             await _unitOfWork.Hotels.Delete(id);
             await _unitOfWork.Save();
-            return NoContent();           
+            return NoContent();
         }
     }
 }
