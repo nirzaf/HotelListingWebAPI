@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace HotelListing.Controllers
 {
-    [ApiVersion("2.0", Deprecated = true)]
-    [Route("api/country")]
+    [ApiVersion("2.0")]
+    [Route("api/countries")]
     [ApiController]
     public class CountryV2Controller : ControllerBase
     {
