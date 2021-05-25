@@ -76,7 +76,7 @@ namespace HotelListing.Controllers
         [Authorize]
         [HttpPut("{id:int}")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> UpdateHotel(int id, [FromBody] UpdateHotelDTO hotelDTO)
         {
@@ -96,7 +96,7 @@ namespace HotelListing.Controllers
             _mapper.Map(hotelDTO, hotel);
             _unitOfWork.Hotels.Update(hotel);
             await _unitOfWork.Save();
-            return NoContent();
+            return Ok();
            
         }
 
