@@ -49,6 +49,7 @@ namespace HotelListing.Controllers
             return Ok(result);
         }
 
+        //Role based Authorization 
         [Authorize(Roles = "Administrator")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
