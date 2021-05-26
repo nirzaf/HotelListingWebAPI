@@ -111,7 +111,7 @@ namespace HotelListing
                 {
                     Endpoint = "*",
                     Limit= 1,
-                    Period = "5s"
+                    Period = "2s"
                 }
             };
             services.Configure<IpRateLimitOptions>(opt =>

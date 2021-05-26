@@ -1,0 +1,200 @@
+2021-05-26 00:16:40.756 +05:30 [INF] Application Is Starting
+2021-05-26 00:23:38.901 +05:30 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-05-26 00:25:03.799 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-26 00:25:03.799 +05:30 [INF] Hosting environment: Development
+2021-05-26 00:25:03.799 +05:30 [INF] Content root path: E:\Source\Repos\HotelListing-API-dotnet5-master\HotelListing
+2021-05-26 00:25:03.857 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2021-05-26 00:25:04.272 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 415.6509ms
+2021-05-26 00:25:05.264 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2021-05-26 00:25:05.411 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 147.1396ms
+2021-05-26 00:29:05.145 +05:30 [INF] Application Is Starting
+2021-05-26 00:29:05.980 +05:30 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-05-26 00:29:06.232 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-26 00:29:06.232 +05:30 [INF] Hosting environment: Development
+2021-05-26 00:29:06.232 +05:30 [INF] Content root path: E:\Source\Repos\HotelListing-API-dotnet5-master\HotelListing
+2021-05-26 00:29:06.261 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2021-05-26 00:29:06.356 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 95.7210ms
+2021-05-26 00:29:07.123 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2021-05-26 00:29:07.226 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 102.9799ms
+2021-05-26 00:29:21.266 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:44379/api/Country/2 - -
+2021-05-26 00:29:21.271 +05:30 [INF] CORS policy execution successful.
+2021-05-26 00:29:21.309 +05:30 [INF] Checking for conditional GET/HEAD.
+2021-05-26 00:29:21.318 +05:30 [INF] Not valid - method isn't GET or HEAD.
+2021-05-26 00:29:21.318 +05:30 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-05-26 00:29:21.319 +05:30 [INF] Checking for conditional PUT/PATCH.
+2021-05-26 00:29:21.320 +05:30 [INF] Not valid - method isn't PUT or PATCH.
+2021-05-26 00:29:21.320 +05:30 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-05-26 00:29:21.846 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at System.Text.UTF8Encoding.UTF8EncodingSealed.GetBytes(String s)
+   at HotelListing.ServiceExtensions.<>c__DisplayClass1_0.<ConfigureJWT>b__1(JwtBearerOptions o) in E:\Source\Repos\HotelListing-API-dotnet5-master\HotelListing\Services\ServiceExtensions.cs:line 44
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-26 00:29:21.921 +05:30 [ERR] Something Went Wrong in the System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at System.Text.UTF8Encoding.UTF8EncodingSealed.GetBytes(String s)
+   at HotelListing.ServiceExtensions.<>c__DisplayClass1_0.<ConfigureJWT>b__1(JwtBearerOptions o) in E:\Source\Repos\HotelListing-API-dotnet5-master\HotelListing\Services\ServiceExtensions.cs:line 44
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-26 00:29:22.202 +05:30 [ERR] An exception was thrown attempting to execute the error handler.
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at HotelListing.ServiceExtensions.<>c.<<ConfigureExceptionHandler>b__2_1>d.MoveNext() in E:\Source\Repos\HotelListing-API-dotnet5-master\HotelListing\Services\ServiceExtensions.cs:line 69
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+2021-05-26 00:29:22.270 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at System.Text.UTF8Encoding.UTF8EncodingSealed.GetBytes(String s)
+   at HotelListing.ServiceExtensions.<>c__DisplayClass1_0.<ConfigureJWT>b__1(JwtBearerOptions o) in E:\Source\Repos\HotelListing-API-dotnet5-master\HotelListing\Services\ServiceExtensions.cs:line 44
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-05-26 00:29:22.328 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-05-26 00:29:22.352 +05:30 [ERR] Connection ID "18374686502757072900", Request ID "80000005-0005-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at System.Text.UTF8Encoding.UTF8EncodingSealed.GetBytes(String s)
+   at HotelListing.ServiceExtensions.<>c__DisplayClass1_0.<ConfigureJWT>b__1(JwtBearerOptions o) in E:\Source\Repos\HotelListing-API-dotnet5-master\HotelListing\Services\ServiceExtensions.cs:line 44
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-05-26 00:29:22.360 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:44379/api/Country/2 - - - 500 - - 1117.5452ms
+2021-05-26 00:29:49.638 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/country application/json 143
+2021-05-26 00:29:49.645 +05:30 [INF] No cached response available for this request.
+2021-05-26 00:29:49.645 +05:30 [INF] Checking for conditional GET/HEAD.
+2021-05-26 00:29:49.649 +05:30 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-05-26 00:29:49.649 +05:30 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-05-26 00:29:49.649 +05:30 [INF] Checking for conditional PUT/PATCH.
+2021-05-26 00:29:49.649 +05:30 [INF] Not valid - method isn't PUT or PATCH.
+2021-05-26 00:29:49.649 +05:30 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-05-26 00:29:49.793 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at System.Text.UTF8Encoding.UTF8EncodingSealed.GetBytes(String s)
+   at HotelListing.ServiceExtensions.<>c__DisplayClass1_0.<ConfigureJWT>b__1(JwtBearerOptions o) in E:\Source\Repos\HotelListing-API-dotnet5-master\HotelListing\Services\ServiceExtensions.cs:line 44
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-26 00:29:49.794 +05:30 [ERR] Something Went Wrong in the System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at System.Text.UTF8Encoding.UTF8EncodingSealed.GetBytes(String s)
+   at HotelListing.ServiceExtensions.<>c__DisplayClass1_0.<ConfigureJWT>b__1(JwtBearerOptions o) in E:\Source\Repos\HotelListing-API-dotnet5-master\HotelListing\Services\ServiceExtensions.cs:line 44
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-26 00:29:49.796 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/country application/json 143 - 500 - application/json 158.6729ms
