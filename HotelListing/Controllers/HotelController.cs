@@ -16,6 +16,7 @@ namespace HotelListing.Controllers
     public class HotelController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
+        /// <summary>The logger</summary>
         private readonly ILogger<HotelController> _logger;
         private readonly IMapper _mapper;
 

@@ -2,6 +2,9 @@
 
 namespace HotelListing.Data
 {
+    /// <summary>
+    /// Class Hotel.
+    /// </summary>
     public class Hotel
     {
         public int Id { get; set; }
