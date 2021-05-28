@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HotelListing.Models
 {
-
     public class UserDTO : LoginUserDTO
     {
         public string FirstName { get; set; }
